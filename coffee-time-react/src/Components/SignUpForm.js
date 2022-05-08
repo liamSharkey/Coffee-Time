@@ -1,5 +1,6 @@
 import React from "react";
-import {Form, Button, Container, Row, Col} from "react-bootstrap";
+import {Button, Container, Row, Col} from "react-bootstrap";
+import {FormGroup, FormControl, FormText, FormLabel} from "react-bootstrap";
 // import {useState} from "react";
 import Select from "react-select";
 
@@ -23,32 +24,32 @@ export default function signUpForm() {
 			<Container>
 				<Row>
 					<Col xs lg={{span: 6, offset: 3}}>
-						<Form>
+						<form onSubmit={handleSubmit}>
 							{/*Email Field*/}
-							<Form.Group className="mb-3" controlId="formBasicEmail">
-								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
-								<Form.Text className="text-muted">
+							<FormGroup className="mb-3" controlId="formBasicEmail">
+								<FormLabel>Email address</FormLabel>
+								<FormControl type="email" placeholder="Enter email" />
+								<FormText className="text-muted">
 									We'll never share your email with anyone else.
-								</Form.Text>
-							</Form.Group>
+								</FormText>
+							</FormGroup>
 
 							{/*Department dropdown*/}
-							<Form.Group className="mb-3" controlId="formDepartment">
-								<Form.Label>Department</Form.Label>
+							<FormGroup className="mb-3" controlId="formDepartment">
+								<FormLabel>Department</FormLabel>
 								<Select options={departments} />
-							</Form.Group>
+							</FormGroup>
 
 							{/*Name Field*/}
-							<Form.Group className="mb-3" controlId="formName">
-								<Form.Label>Name</Form.Label>
-								<Form.Control type="text" placeholder="Enter your name" />
-							</Form.Group>
+							<FormGroup className="mb-3" controlId="formName">
+								<FormLabel>Name</FormLabel>
+								<FormControl type="text" placeholder="Enter your name" />
+							</FormGroup>
 
 							<Button variant="primary" type="submit">
 								Submit
 							</Button>
-						</Form>
+						</form>
 					</Col>
 				</Row>
 			</Container>
