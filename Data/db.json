@@ -1,0 +1,16 @@
+{
+	"Users": [
+		{
+			"Name": "Liam Sharkey",
+			"email": "l.sharkey1105@hotmail.com",
+			"department": "engineering",
+			"id": "o3MzzbG"
+		},
+		{
+			"Name": "Example User",
+			"email": "someone@example.com",
+			"department": "human resources",
+			"id": "veiXfE1"
+		}
+	]
+}
